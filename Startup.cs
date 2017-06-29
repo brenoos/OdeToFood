@@ -46,6 +46,10 @@ namespace OdeToFood
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseWelcomePage(new WelcomePageOptions {
+                Path = "/welcome"
+            });
+
             app.Run(async (context) =>
             {
                 var message = greeter.GetGreeting();
